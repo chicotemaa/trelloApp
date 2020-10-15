@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>vue pruebas</title>
 </head>
 <body>
+    <div id="app">
+        <form v-on:submit.prevent="nuevaTarea" >
+            <input type="text" v-model="NuevaTarea" placeholder="tarea">
+            <input type="submit" value="guardar tarea">
+        </form>
+        <ul>
+            <li v-for="usuario in usuarios">
+                {{ usuario.name }}
+            </li>
+        </ul>
     
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>   
 </body>
 </html>
